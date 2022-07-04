@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+echo "------ HOOK START - BUILD -------"
+
+docker build --build-arg DOCKER_USER=$DOCKER_USERNAME --build-arg DOCKER_PASSWORD=$DOCKER_SECRET -t $IMAGE_NAME .
+
+echo "------ HOOK END - BUILD -------"

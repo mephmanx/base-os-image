@@ -5,6 +5,8 @@ ENV USERHOME=/root
 USER 0
 WORKDIR $USERHOME
 
+ARG VERSION
+ENV VERSION=$VERSION
 COPY init-script.sh /root
 RUN chmod +x /root/init-script.sh
 RUN ./init-script.sh
