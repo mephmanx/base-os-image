@@ -6,5 +6,6 @@ USER 0
 WORKDIR $USERHOME
 
 COPY init-script.sh /root
+RUN chmod +x /root/init-script.sh
 RUN ./init-script.sh
 CMD ["/bin/bash", "-l"]
