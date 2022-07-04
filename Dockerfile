@@ -5,5 +5,6 @@ ENV USERHOME=/root
 USER 0
 WORKDIR $USERHOME
 
+COPY init-script.sh /root
 RUN ./init-script.sh
 CMD ["/bin/bash", "-l"]
