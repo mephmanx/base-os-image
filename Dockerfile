@@ -5,9 +5,9 @@ ENV USERHOME=/root
 USER 0
 WORKDIR $USERHOME
 
-ARG VERSION
-ENV VERSION=$OS_VERSION
+ARG CENTOS_VERSION
+ENV CENTOS_VERSION=$OS_VERSION
 COPY init-script.sh /root
 RUN chmod +x /root/init-script.sh
-RUN ./init-script.sh "$VERSION"
+RUN ./init-script.sh "$CENTOS_VERSION"
 CMD ["/bin/bash", "-l"]
