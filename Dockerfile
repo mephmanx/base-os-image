@@ -5,7 +5,7 @@ ENV USERHOME=/root
 USER 0
 WORKDIR $USERHOME
 
-ARG CENTOS_VERSION
+ARG OS_VERSION
 ENV CENTOS_VERSION=$OS_VERSION
 COPY init-script.sh /root
 RUN chmod +x /root/init-script.sh
